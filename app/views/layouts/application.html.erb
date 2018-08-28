@@ -16,13 +16,13 @@
 
   <body>
     <nav class="fixed-top navbar navbar-expand-md">
-      <div class="container-mockup navbar-brand">
-        <%= link_to image_tag("logo-charly.svg", alt: "Logo Charly"), root_path %>
+      <div class="container-mockup__left navbar-brand">
+        <%= link_to image_tag("logo-charly.svg", alt: "Charly Logo"), root_path %>
       </div>
-      <button class="container-mockup navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="container-mockup__right navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse container-mockup navbar-collapse" id="navbarSupportedContent">
+      <div class="collapse container-mockup__right navbar-collapse" id="navbarSupportedContent">
         <ul class="ml-auto navbar-nav">
           <li class="nav-item"><%= active_link_to "Home", root_path, active: :exclusive, class: "nav-link" %></li>
           <li class="nav-item"><%= active_link_to "About", simple_pages_about_path, class: "nav-link" %></li>

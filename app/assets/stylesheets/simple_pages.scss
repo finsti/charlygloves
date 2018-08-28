@@ -19,8 +19,12 @@ body {
   margin: 0 auto;
 }
 
-.container-mockup {
-  margin: 0 10%;
+.container-mockup__left {
+  margin-left: 10%;
+}
+
+.container-mockup__right {
+  margin-right: 10%;
 }
 
 // basic typography
