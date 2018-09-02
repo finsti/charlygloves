@@ -39,6 +39,9 @@ gem 'bootsnap', '>= 1.1.0', require: false
 # Creates a link tag of the given name using a URL created by the set of options. read more: https://github.com/comfy/active_link_to
 gem 'active_link_to'
 
+# Normalize styles across all browsers with a collection of HTML element and attribute rulesets
+gem 'normalize-scss'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
