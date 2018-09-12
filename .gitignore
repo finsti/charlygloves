@@ -30,6 +30,9 @@
 # Ignore master key for decrypting credentials and more.
 /config/master.key
 
+# Ignore original products index page that is kept for reference
+/app/views/products/*index.html.erb
+
 # The part below is taken from Rails.gitignore at https://github.com/github/gitignore/blob/master/Rails.gitignore
 
 *.rbc
@@ -80,3 +83,16 @@ bower.json
 
 # Ignore node_modules
 node_modules/
+
+# Ignore precompiled javascript packs
+/public/packs
+/public/packs-test
+
+# Ignore yarn files
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity
+
+# Ignore uploaded files in development
+/storage/*
+!/storage/.keep

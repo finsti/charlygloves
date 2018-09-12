@@ -1,0 +1,27 @@
+// Place all the styles related to the products controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+// basic styles
+
+.box {
+  padding: 10px;
+  margin: 0 10px;
+  text-align: center;
+  box-shadow: inset 0px 0px 1px 1px #e4e5e7;
+}
+
+.box__bottom {
+  padding: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+  background-color: #e4e5e7;
+}
+
+.container-mockup__height {
+  min-height: calc(100vh - 159px);
+}
+
+.img-product {
+  max-width: 80%;
+}

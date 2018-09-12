@@ -15,7 +15,7 @@ body {
 
 .container {
   width: 80%;
-  min-height: calc(100vh - 180px);
+  min-height: calc(100vh - 175px);
   margin: 0 auto;
 }
 
@@ -27,10 +27,15 @@ body {
   margin-right: 10%;
 }
 
+.row {
+  margin: 0 auto;
+}
+
 // basic typography
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 0.8em;
   color: #333;
 }
 
@@ -41,6 +46,11 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 // navigation
@@ -80,17 +90,18 @@ nav img {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-// content -> elektrisch
+// content
 
 .img-category {
   float: left;
+  max-height: 400px;
   padding: 20px;
 }
 
 // footer
 
 footer {
-  bottom: 0;
+  z-index: 1020;
   width: 100%;
   padding: 20px;
   color: #fff;

@@ -1,0 +1,46 @@
+<div class="container-mockup__height">
+  <h1>Produkte</h1>
+  <h2>Elektrisch beheizbare Handschuhe mit Lithium-Polymer-Ionen (Li-Po-Ion) Akku-Technologie</h2>
+  <div class="row">
+    <% @products.each do |product| %>
+      <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
+        <div class="box">
+          <%= image_tag(product.image_url, class: "img-fluid img-product", alt: product.name) %>
+        </div>
+        <div class="box box__bottom">
+          <h3><%= product.name %></h3>
+          <p><%= product.description %></p>
+          <p><%= link_to 'Mehr Infos', product %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<!-- <table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Description</th>
+      <th>Image url</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @products.each do |product| %>
+      <tr>
+        <td><%= product.name %></td>
+        <td><%= product.description %></td>
+        <td><%= product.image_url %></td>
+        <td><%= link_to 'Show', product %></td>
+        <td><%= link_to 'Edit', edit_product_path(product) %></td>
+        <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Product', new_product_path %> -->
