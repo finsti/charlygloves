@@ -31,7 +31,7 @@
 /config/master.key
 
 # Ignore original products index page that is kept for reference
-/app/views/products/*index.html.erb
+/app/views/products/original_index.html.erb
 
 # The part below is taken from Rails.gitignore at https://github.com/github/gitignore/blob/master/Rails.gitignore
 
