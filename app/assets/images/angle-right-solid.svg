@@ -1,1 +1,9 @@
-<svg aria-hidden="false" data-prefix="fas" data-icon="angle-right" class="svg-inline--fa fa-angle-right fa-w-8" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path fill="#59adeb" d="M224.3 273l-136 136c-9.4 9.4-24.6 9.4-33.9 0l-22.6-22.6c-9.4-9.4-9.4-24.6 0-33.9l96.4-96.4-96.4-96.4c-9.4-9.4-9.4-24.6 0-33.9L54.3 103c9.4-9.4 24.6-9.4 33.9 0l136 136c9.5 9.4 9.5 24.6.1 34z"></path></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="98.41px" height="152.41px" viewBox="0 0 98.41 152.41" enable-background="new 0 0 98.41 152.41" xml:space="preserve">
+<path fill="#59ADEB" d="M95.058,84.299l-64.754,64.755c-4.475,4.476-11.713,4.476-16.141,0l-10.76-10.761
+	c-4.477-4.476-4.477-11.713,0-16.142l45.851-45.946l-45.9-45.899c-4.475-4.476-4.475-11.713,0-16.141L14.117,3.356
+	c4.475-4.476,11.713-4.476,16.141,0L95.011,68.11C99.535,72.587,99.535,79.823,95.058,84.299L95.058,84.299z"/>
+</svg>
