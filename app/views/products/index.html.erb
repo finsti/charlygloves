@@ -2,20 +2,7 @@
   <h1>Produkte</h1>
   <h2>Elektrisch beheizbare Handschuhe mit Lithium-Polymer-Ionen (Li-Po-Ion) Akku-Technologie</h2>
   <div class="row">
-    <% @products.each do |product| %>
-      <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
-        <div class="box">
-          <%= image_tag(product.image_url, class: "img-fluid img-product", alt: product.name) %>
-        </div>
-        <div class="box box__bottom">
-          <h3><%= product.name %></h3>
-          <p><%= product.description %></p>
-          <p>Farbe: <%= product.colour %></p>
-          <p>Preis: <%= number_to_currency(product.price, :locale => :de) %></p>
-          <p><%= link_to 'Mehr Infos', product %></p>
-        </div>
-      </div>
-    <% end %>
+    <%= render @products %>
   </div>
 </div>
 

@@ -19,6 +19,10 @@ body {
   margin: 0 auto;
 }
 
+.container-mockup__height {
+  min-height: calc(100vh - 159px);
+}
+
 .container-mockup__left {
   margin-left: 10%;
 }
@@ -90,12 +94,50 @@ nav img {
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
 }
 
-// content
+// content -> index
 
 .img-category {
   float: left;
   max-height: 400px;
   padding: 20px;
+}
+
+// content -> landing page
+
+.carousel-caption {
+  color: #333;
+  background-color: #fff;
+  opacity: .75;
+}
+
+.carousel-control-next, .carousel-control-prev {
+  opacity: 1;
+}
+
+.carousel-control-next-icon {
+  background-image: url("angle-right-solid.svg");
+  height: 100px;
+}
+
+.carousel-control-prev-icon {
+  height: 100px;
+  background-image: url("angle-left-solid.svg");
+}
+
+.carousel-indicators .active {
+  background-color: #59adeb;
+}
+
+.carousel-indicators li {
+  background-color: #333;
+}
+
+.carousel-inner {
+  text-align: center;
+}
+
+.img-carousel {
+  max-width: 40%;
 }
 
 // footer
