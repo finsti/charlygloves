@@ -1,0 +1,17 @@
+<div class="container-mockup__height">
+  <h1>Bestellübersicht</h1>
+  <h2>Eingegangene Bestellungen</h2>
+  <div class="row">
+    <% @orders.each do |order| %>
+    <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
+      <div class="box box__bottom">
+        <p><i>Bestellung Nr. <%= order.id %></i></p>
+        <h3><%= order.product.name %></h3>
+        <p><%= order.product.description %></p>
+        <p>Einzelpreis: <%= number_to_currency(order.product.price, :locale => :de) %></p>
+        <p><%= link_to "Bestelldetails", order %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>

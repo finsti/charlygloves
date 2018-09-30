@@ -1,0 +1,6 @@
+<h1>Bestellinformationen</h1>
+<h2>Details zu Ihrer Bestellung</h2>
+<p><strong>Bestellnummer:</strong> <%= @order.id %><br>
+<strong>Artikelbezeichnung:</strong> <%= @order.product.name %><br>
+<strong>Einzelpreis:</strong> <%= number_to_currency(@order.product.price/100.to_f, :locale => :de) %><br>
+<strong>Gesamtpreis:</strong> <%= number_to_currency(@order.total/100.to_f, :locale => :de) %></p>
