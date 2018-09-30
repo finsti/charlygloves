@@ -1,4 +1,4 @@
-class ChangePhoneToBeDecimalInCustomers < ActiveRecord::Migration[5.2]
+class ChangeTotalToBeDecimalInOrders < ActiveRecord::Migration[5.2]
   def change
     change_column :orders, :total, :decimal
   end
