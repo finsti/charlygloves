@@ -114,16 +114,6 @@ nav img {
   opacity: 1;
 }
 
-.carousel-control-next-icon {
-  background-image: url("https://naughty-einstein-5e8af0.netlify.com/img/angle-right-solid.svg");
-  height: 100px;
-}
-
-.carousel-control-prev-icon {
-  height: 100px;
-  background-image: url("https://naughty-einstein-5e8af0.netlify.com/img/angle-left-solid.svg");
-}
-
 .carousel-indicators .active {
   background-color: #59adeb;
 }
@@ -138,6 +128,10 @@ nav img {
 
 .img-carousel {
   max-width: 40%;
+}
+
+.img-control {
+  max-width: 20%;
 }
 
 // footer
