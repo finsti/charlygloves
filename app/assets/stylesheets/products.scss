@@ -5,20 +5,23 @@
 // basic styles
 
 .box {
+  width: 100%;
   padding: 10px;
   margin: 0 10px;
   text-align: center;
   box-shadow: inset 0px 0px 1px 1px #e4e5e7;
 }
 
-.box__bottom {
+.box--bottom {
+  width: 100%;
+  min-height: 240px;
   padding: 10px;
   margin-bottom: 20px;
   text-align: left;
   background-color: #e4e5e7;
 }
 
-.container-mockup__height {
+.container-mockup--height {
   min-height: calc(100vh - 159px);
 }
 

@@ -10,33 +10,27 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+    <%= form.label :name, "Artikelbezeichnung", class: "form__label" %>
+    <%= form.text_field :name, class: "form__text-field" %>
   </div>
-
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :description, "Kurzbeschreibung", class: "form__label" %>
+    <%= form.text_area :description, rows: "10", class: "form__text-field" %>
   </div>
-
   <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url %>
+    <%= form.label :image_url, "Bild-URL", class: "form__label" %>
+    <%= form.text_field :image_url, class: "form__text-field" %>
   </div>
-
   <div class="field">
-    <%= form.label :colour %>
-    <%= form.text_field :colour %>
+    <%= form.label :colour, "Farbe", class: "form__label" %>
+    <%= form.text_field :colour, class: "form__text-field" %>
   </div>
-
   <div class="field">
-    <%= form.label :price %>
-    <%= form.text_field :price %>
+    <%= form.label :price, "Preis", class: "form__label" %>
+    <%= form.text_field :price, class: "form__text-field" %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
+  <p class="actions">
+    <%= form.submit "absenden", class: "form__btn form__btn--primary" %>
+  </p>
 <% end %>

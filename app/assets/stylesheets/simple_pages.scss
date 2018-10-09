@@ -19,15 +19,15 @@ body {
   margin: 0 auto;
 }
 
-.container-mockup__height {
+.container-mockup--height {
   min-height: calc(100vh - 159px);
 }
 
-.container-mockup__left {
+.container-mockup--left {
   margin-left: 10%;
 }
 
-.container-mockup__right {
+.container-mockup--right {
   margin-right: 10%;
 }
 
@@ -36,6 +36,10 @@ body {
 }
 
 // basic typography
+
+a:link, a:visited, a:hover, a.active {
+  color: #55acee;
+}
 
 body {
   font-family: verdana, arial, helvetica, sans-serif;
@@ -84,6 +88,19 @@ nav img {
 
 .nav-item {
   text-align: right;
+}
+
+.navbar-search {
+  padding: 4px 0;
+}
+
+.navbar-search__submit {
+  border-radius: 5px 0 0 5px;
+}
+
+.navbar-search__text-field {
+  // border: 1px solid transparent;
+  border-radius: 0 5px 5px 0;
 }
 
 .navbar-toggler {

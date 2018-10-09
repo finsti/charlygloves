@@ -1,6 +1,7 @@
-<h1>Editing Product</h1>
-
-<%= render 'form', product: @product %>
-
-<%= link_to 'Show', @product %> |
-<%= link_to 'Back', products_path %>
+<div class="container-mockup--height">
+  <h1>Adminbereich</h1>
+  <h2>Produkt bearbeiten</h2>
+  <%= render 'form', product: @product %>
+  <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zu den Artikeldetails', @product %></button></p>
+  <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button></p>
+</div>

@@ -1,0 +1,48 @@
+.form {
+  width: 50%;
+  padding: 4px;
+  background-color: #e4e5e7;
+  border: 0;
+  border-radius: 5px;
+}
+
+.form__btn {
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 5px;
+}
+
+.form__btn:hover {
+  border: 1px solid #333;
+}
+
+.form__btn--primary {
+  background-color: #e4e5e7;
+}
+
+.form__btn--secondary {
+  background-color: #55acee;
+}
+
+.form__btn--secondary a:link, .form__btn--secondary a:visited, .form__btn--secondary a:hover, .form__btn--secondary a.active {
+  color: #fff;
+  text-decoration: none;
+}
+
+.form__label {
+  width: 50%;
+  padding: 4px;
+  margin: 4px 0;
+  font-weight: bold;
+  background-color: #e4e5e7;
+  border-radius: 5px 5px 0 0;
+}
+
+.form__text-field {
+  width: 50%;
+  padding: 4px;
+  border: 1px solid transparent;
+  border-radius: 0 0 5px 5px;
+  resize: none;
+  background-color: rgba(0, 0, 0, 0.15);
+}

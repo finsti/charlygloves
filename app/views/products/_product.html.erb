@@ -2,11 +2,11 @@
   <div class="box">
     <%= image_tag(product.image_url, class: "img-fluid img-product", alt: product.name) %>
   </div>
-  <div class="box box__bottom">
+  <div class="box box--bottom">
     <h3><%= product.name %></h3>
     <p><%= product.description %></p>
     <p>Farbe: <%= product.colour %></p>
     <p>Preis: <%= number_to_currency(product.price, :locale => :de) %></p>
-    <p><%= link_to 'Mehr Infos', product %></p>
+    <p><%= link_to "Artikeldetails", product %></p>
   </div>
 </div>

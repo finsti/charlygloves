@@ -1,10 +1,10 @@
-<div class="container-mockup__height">
+<div class="container-mockup--height">
   <h1>Bestellübersicht</h1>
   <h2>Eingegangene Bestellungen</h2>
   <div class="row">
     <% @orders.each do |order| %>
     <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
-      <div class="box box__bottom">
+      <div class="box box--bottom">
         <p><i>Bestellung Nr. <%= order.id %></i></p>
         <h3><%= order.product.name %></h3>
         <p><%= order.product.description %></p>
