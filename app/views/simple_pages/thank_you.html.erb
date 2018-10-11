@@ -1,0 +1,20 @@
+<h1>Vielen Dank für Ihre Nachricht</h1>
+<h2>Wir werden Ihr Anliegen schnellstmöglich bearbeiten</h2>
+<p>
+  <%= image_tag("check-circle-solid.svg", class: "img-fluid img__icon", alt: "Wir haben Ihre Nachricht erhalten") %>
+</p>
+<p>
+  Die folgenden Daten haben wir von Ihnen erhalten:
+</p>
+<p>
+  <strong>Ihr Name:</strong>
+  <%= @name %>
+</p>
+<p>
+  <strong>Ihre E-Mail Adresse:</strong>
+  <%= @email %>
+</p>
+<p>
+  <strong>Ihre Nachricht:</strong>
+  <%= @message %>
+</p>
