@@ -29,20 +29,34 @@
               <%= form.submit 'Suche', class: "form__btn form__btn--primary navbar-search__submit" %>
               <%= form.text_field :q, id: 'q', value: params[:q], class: "img-responsive form__text-field navbar-search__text-field" %>
             <% end %>
+            <li class="nav-item">&emsp;</li>
           </li>
-          <li class="nav-item">&emsp;</li>
+        </ul>
+        <ul class="ml-auto navbar-nav">
           <li class="nav-item"><%= active_link_to "Home", root_path, active: :exclusive, class: "nav-link" %></li>
           <li class="nav-item"><%= active_link_to "Produkte", products_path, class: "nav-link" %></li>
           <li class="nav-item"><%= active_link_to "Über\u00A0uns", simple_pages_about_path, class: "nav-link" %></li>
           <li class="nav-item"><%= active_link_to "Kontakt", simple_pages_contact_path, class: "nav-link" %></li>
         </ul>
+        <ul class="ml-auto navbar-nav">
+          <% if user_signed_in? %>
+          <li class="nav-item">
+            <button type="button" class="form__btn form__btn--primary"><%= link_to('Logout', destroy_user_session_path, method: :delete) %></button>
+          </li>
+          <% else %>
+          <li class="nav-item">
+            <button type="button" class="form__btn form__btn--primary"><%= link_to('Login', new_user_session_path) %></button>
+          </li>
+          <% end %>
+        </ul>
+        &emsp;<%= flash[:notice] %>
       </div>
     </nav>
     <div class="container">
 
       <%= yield %>
 
-    </div><!-- /container -->
+    </div>
     <footer>
       Copyright &copy; 2018 Finsterwalder GmbH. Alle Rechte vorbehalten.
     </footer>

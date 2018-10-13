@@ -2,7 +2,6 @@
   <% if product.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
-
       <ul>
       <% product.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -14,7 +13,7 @@
     <%= form.label :name, "Artikelbezeichnung", class: "form__label" %>
     <%= form.text_field :name, class: "form__text-field" %>
   </div>
-  <div class="field">
+  <div class="field-mockup--height">
     <%= form.label :description, "Kurzbeschreibung", class: "form__label" %>
     <%= form.text_area :description, rows: 10, class: "form__text-field" %>
   </div>
@@ -30,7 +29,5 @@
     <%= form.label :price, "Preis", class: "form__label" %>
     <%= form.text_field :price, class: "form__text-field" %>
   </div>
-  <p class="actions">
-    <%= form.submit "absenden", class: "form__btn form__btn--primary" %>
-  </p>
+  <p><%= form.submit "absenden", class: "form__btn form__btn--primary" %></p>
 <% end %>

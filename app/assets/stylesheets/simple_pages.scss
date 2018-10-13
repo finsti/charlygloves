@@ -35,6 +35,14 @@ body {
   margin-right: 10%;
 }
 
+.inline {
+  display: inline;
+}
+
+.notice {
+  text-align: right;
+}
+
 .nowrap {
   white-space: nowrap;
 }
@@ -103,6 +111,16 @@ nav a:link, nav a:visited {
 
 nav a:hover, nav a.active {
   color: #fff;
+  text-decoration: none;
+}
+
+nav button a {
+  transition: none;
+  -webkit-transition: none;
+}
+
+nav button a:hover, nav button a.active {
+  color: #333;
   text-decoration: none;
 }
 

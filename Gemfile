@@ -42,6 +42,9 @@ gem 'active_link_to'
 # Normalize styles across all browsers with a collection of HTML element and attribute rulesets
 gem 'normalize-scss'
 
+# Adds user authentication
+gem 'devise'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
