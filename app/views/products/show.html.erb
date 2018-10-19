@@ -20,6 +20,8 @@
   </p>
   <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Produkt bearbeiten', edit_product_path(@product) %></button></p>
   <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button></p>
+  <p><%= @product.highest_rating_comment %></p>
+  <p><%= @product.lowest_rating_comment %></p>
 </div>
 <div class="row">
   <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
