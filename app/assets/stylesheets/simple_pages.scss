@@ -36,13 +36,14 @@ body {
 }
 
 .inline {
-  display: inline;
+  display: inline-block;
+  vertical-align: top;
 }
 
-.notice {
+.message {
+  color: #fff;
   text-align: center;
   border-radius: 5px;
-  color: #fff;
 }
 
 .nowrap {

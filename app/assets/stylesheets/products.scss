@@ -14,11 +14,20 @@
 
 .box--bottom {
   width: 100%;
-  min-height: 240px;
   padding: 10px;
   margin-bottom: 20px;
   text-align: left;
   background-color: #e4e5e7;
+  overflow: auto;
+}
+
+.box--bottom--overview {
+  min-height: 240px;
+}
+
+.box--top {
+  width: 100%;
+  // height: 77px;
 }
 
 .container-mockup--height {
