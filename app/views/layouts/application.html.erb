@@ -38,6 +38,7 @@
           <li class="nav-item"><%= active_link_to "Über\u00A0uns", simple_pages_about_path, class: "nav-link" %></li>
           <li class="nav-item"><%= active_link_to "Kontakt", simple_pages_contact_path, class: "nav-link" %></li>
         </ul>
+        &emsp;
         <ul class="ml-auto navbar-nav">
           <% if user_signed_in? %>
           <li class="nav-item">
@@ -49,7 +50,9 @@
           </li>
           <% end %>
         </ul>
-        &emsp;<%= flash[:notice] %>
+        &emsp;
+        <% if alert %><div class="form__text-field notice"><%= alert %></div><% end %>
+        <% if notice %><div class="form__text-field notice"><%= notice %></div><% end %>
       </div>
     </nav>
     <div class="container">
