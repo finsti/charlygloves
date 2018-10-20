@@ -1,0 +1,20 @@
+$(document).on('turbolinks:load', function(){
+
+  $('.rating').raty({
+    starHalf: '<%= asset_path 'star-half.svg' %>',
+    starOff: '<%= asset_path 'star-off.svg' %>',
+    starOn: '<%= asset_path 'star-on.svg' %>',
+    scoreName: 'comment[rating]'
+  });
+
+  $('.rated').raty({
+    starHalf: '<%= asset_path 'star-half.svg' %>',
+    starOff: '<%= asset_path 'star-off.svg' %>',
+    starOn: '<%= asset_path 'star-on.svg' %>',
+    readOnly: true,
+    score: function() {
+      return $(this).attr('data-score');
+    }
+  });
+  
+});

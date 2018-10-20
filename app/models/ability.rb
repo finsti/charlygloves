@@ -1,4 +1,5 @@
 class Ability
+
   include CanCan::Ability
 
   def initialize(user)
@@ -6,4 +7,5 @@ class Ability
     can :manage, User, id: user.id
     can :manage, Order, id: user.id
   end
+  
 end

@@ -18,65 +18,20 @@
     <strong>Preis:</strong>
     <%= number_to_currency(@product.price, :locale => :de) %>
   </p>
+  <p>
+    <div class="rated" data-score="<%= @product.average_rating %>"><strong>Durchschnittliche Kundenbewertung:</strong><br></div>
+  </p>
   <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Produkt bearbeiten', edit_product_path(@product) %></button></p>
   <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button></p>
-  <p><%= @product.highest_rating_comment %></p>
-  <p><%= @product.lowest_rating_comment %></p>
 </div>
-<div class="row">
-  <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
-    <div class="box box--top">
-      <strong>Bewertung:</strong>
-      <div>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-regular.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-      </div>
-      4/5 Sternen
-    </div>
-    <div class="box box--bottom">
-      <p>
-        Ergebnis nach vielen Fahrten zur Arbeit und zwei dreistündigen Rennradtouren: Sie halten, was sie versprechen. Bereits die niedrigste Stufe reicht aus, um gerade nicht mehr zu frieren. In dieser Stufe halten die Akkus mehrere Stunden. Bei den beiden höheren Stufen sind diese verständlicherweise schneller leer. Dafür bieten sie aber spürbar angenehme Wärme.
-      </p>
-    </div>
-  </div>
-  <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
-    <div class="box box--top">
-      <strong>Bewertung:</strong>
-      <div>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-      </div>
-      5/5 Sternen
-    </div>
-    <div class="box box--bottom">
-      <p>
-        Der Handschuh heizt direkt an den Fingern - und zwar wirklich heiß. Hatte den Handschuh beim Skifahren dabei erst ohne Heizung und dann gegen Nachmittag wurden die Finger kalt. Auf höchster Stufe habe ich nur kurz geheizt und dann runter geschalten weil es einfach zu warm war... Bin sehr zufrieden und kann die Handschuhe nur empfehlen.
-      </p>
-    </div>
-  </div>
-  <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
-    <div class="box box--top">
-      <strong>Bewertung:</strong>
-      <div>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-solid.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-regular.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-        <%= image_tag("star-regular.svg", class: "img-fluid", alt: "Neues Produkt hinzufügen") %>
-      </div>
-      3/5 Sternen
-    </div>
-    <div class="box box--bottom">
-      <p>
-        Die Akkulaufzeit ist für normale Flüge völlig ausreichend, auch für einen Winterflug bei minusgraden bis ca. 2 Std. wenn man nicht laufend auf voller Stufe heizen muss.<br>
-        Für einen mehrstündigen frühlings Streckenflug mit hoher Basis und da entsprechenden Temperaturen könnte die allerdings knapp werden. Da wär evtl. ein doppelter Akkupack ganz praktisch.
-      </p>
-    </div>
-  </div>
+<hr>
+<div>
+  <%= render 'new_comment' %>
 </div>
+<hr>
+<h2>Kundenbewertungen</h2>
+<p>
+  <div class="product-reviews row">
+    <%= render 'comments' %>
+  </div>
+</p>
