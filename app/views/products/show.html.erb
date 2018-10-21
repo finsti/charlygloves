@@ -34,4 +34,5 @@
   <div class="product-reviews row">
     <%= render 'comments' %>
   </div>
+  <%= will_paginate @comments, :previous_label => '&larr; Zurück', :next_label => 'Vor &rarr;', :page_links => false, class: "center" %>
 </p>
