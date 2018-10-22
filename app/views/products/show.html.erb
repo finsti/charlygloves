@@ -1,23 +1,36 @@
 <h1> Artikeldetails</h1>
 <h2><%= @product.name %></h2>
+<div class="inline">
+  <p><%= image_tag(@product.image_url, class: "img-fluid img__float", alt: @product.name) %></p>
+  <p>
+    <strong>Artikelbezeichnung:</strong>
+    <%= @product.name %>
+  </p>
+  <p>
+    <strong>Kurzbeschreibung:</strong>
+    <%= @product.description %>
+  </p>
+  <p>
+    <strong>Farbe:</strong>
+    <%= @product.colour %>
+  </p>
+  <p>
+    <strong>Preis:</strong>
+    <%= number_to_currency(@product.price, :locale => :de) %>
+  </p>
+  <p>
+    <div class="rated" data-score="<%= @product.average_rating %>"><strong>Durchschnittliche Kundenbewertung:</strong><br></div>
+  </p>
+  <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Produkt bearbeiten', edit_product_path(@product) %></button></p>
+  <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button></p>
+</div>
+<div>
+  <%= render 'new_comment' %>
+</div>
+<h2>Kundenbewertungen</h2>
 <p>
-  <%= image_tag(@product.image_url, class: "img-fluid img__float", alt: @product.name) %>
+  <div class="product-reviews row">
+    <%= render 'comments' %>
+  </div>
+  <%= will_paginate @comments, :previous_label => '&larr; Zurück', :next_label => 'Vor &rarr;', :page_links => false, class: "center" %>
 </p>
-<p>
-  <strong>Artikelbezeichnung:</strong>
-  <%= @product.name %>
-</p>
-<p>
-  <strong>Kurzbeschreibung:</strong>
-  <%= @product.description %>
-</p>
-<p>
-  <strong>Farbe:</strong>
-  <%= @product.colour %>
-</p>
-<p>
-  <strong>Preis:</strong>
-  <%= number_to_currency(@product.price, :locale => :de) %>
-</p>
-<p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Produkt bearbeiten', edit_product_path(@product) %></button></p>
-<p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button></p>

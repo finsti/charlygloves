@@ -14,13 +14,13 @@
 
 .box--bottom {
   width: 100%;
-  min-height: 240px;
   padding: 10px;
   margin-bottom: 20px;
   text-align: left;
   background-color: #e4e5e7;
+  overflow: auto;
 }
 
-.container-mockup--height {
-  min-height: calc(100vh - 159px);
+.box--bottom--overview {
+  min-height: 240px;
 }
