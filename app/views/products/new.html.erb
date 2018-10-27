@@ -1,9 +1,11 @@
 <div class="container--small container-mockup--height">
+
   <h1>Adminbereich</h1>
   <h2>Neues Produkt hinzufügen</h2>
+
   <%= render 'form', product: @product %>
-  <button type="button" class="form__btn form__btn--secondary">
-    <%= link_to 'Zur Produktübersicht', products_path %>
-  </button>
+
+  <button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button>
   <p>&nbsp;</p>
+
 </div>

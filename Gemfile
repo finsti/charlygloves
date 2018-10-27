@@ -51,16 +51,14 @@ gem 'cancancan', '~> 2.0'
 # Adds pagination library
 gem 'will_paginate', '~> 3.1.6'
 
+# Brings back `assigns` and `assert_template` to Rails tests
+gem 'rails-controller-testing'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-end
-
-group :development, :test do
+  # Adds the RSpec testing framework
   gem 'rspec-rails', '~> 3.8'
-end
-
-group :development, :test do
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
 end
