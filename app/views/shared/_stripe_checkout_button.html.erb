@@ -3,9 +3,16 @@
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
   data-image="<%= asset_path(@product.image_url) %>"
   data-name="<%= @product.name %>"
-  data-description="<%= @product.description %>"
   data-amount="<%= @product.price*100.to_i %>"
+  data-locale="de"
   data-currency="eur"
   data-label="Jetzt kaufen"
   data-panel-label="{{amount}} bezahlen">
 </script>
+
+<script>
+    // Hide default stripe button, be careful there if you
+    // have more than 1 button of that class
+    document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+</script>
+<button type="submit" class="form__btn form__btn--primary">Jetzt kaufen</button>
