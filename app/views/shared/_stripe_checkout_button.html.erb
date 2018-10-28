@@ -1,8 +1,11 @@
 <script
   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-image="<%= image_tag(@product.image_url) %>"
+  data-image="<%= asset_path(@product.image_url) %>"
   data-name="<%= @product.name %>"
   data-description="<%= @product.description %>"
-  data-amount="<%= number_to_currency(@product.price, :locale => :de) %>"
+  data-amount="<%= @product.price*100.to_i %>"
+  data-currency="eur"
+  data-label="Jetzt kaufen"
+  data-panel-label="{{amount}} bezahlen">
 </script>
