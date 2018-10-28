@@ -1,28 +1,26 @@
-<h1>Users</h1>
-<h2>&nbsp;</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th>Vorname</th>
-      <th>Nachname</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @users.each do |user| %>
+<div class="container-mockup--height">
+  <h1>Users</h1>
+  <h2>&nbsp;</h2>
+  <table>
+    <thead>
       <tr>
-        <td><%= user.first_name %></td>
-        <td><%= user.last_name %></td>
-        <td><%= link_to 'Benutzerdetails', user %></td>
-        <td><%= link_to 'bearbeiten', edit_user_path(user) %></td>
-        <td><%= link_to 'löschen', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <th>Vorname</th>
+        <th>Nachname</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<button type="button" class="form__btn form__btn--secondary"><%= link_to 'Neuen Benutzer anlegen', new_user_path %></button>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td><%= user.first_name %></td>
+          <td><%= user.last_name %></td>
+          <td><%= link_to 'Benutzerdetails', user %></td>
+          <td><%= link_to 'bearbeiten', edit_user_path(user) %></td>
+          <td><%= link_to 'löschen', user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <button type="button" class="form__btn form__btn--secondary"><%= link_to 'Neuen Benutzer anlegen', new_user_path %></button>
+</div>

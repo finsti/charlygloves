@@ -16,6 +16,7 @@
 }
 
 .form__btn:hover {
+  cursor: pointer;
   border: 1px solid #333;
 }
 
@@ -48,4 +49,8 @@
   resize: none;
   background-color: rgba(0, 0, 0, 0.15);
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+
+.stripe-button-el {
+  display: none !important;
 }
