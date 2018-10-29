@@ -19,13 +19,21 @@
     <%= number_to_currency(@product.price, :locale => :de) %>
   </p>
 
-  <p>
-    <%= form_with(url: '/payments/create') do |form| %>
-      <%= render partial: "shared/stripe_checkout_button" %>
-      <%= hidden_field_tag(:product_id, @product.id) %>
-      <%= form.submit "Jetzt kaufen", class: "form__btn form__btn--primary" %>
-    <% end %>
-  </p>
+  <% if !signed_in? %>
+    <p>
+      <%= link_to('Login', new_user_session_path) %> zum kaufen!
+    </p>
+  <% end %>
+
+  <% if signed_in? %>
+    <p>
+      <%= form_with(url: '/payments/create') do |form| %>
+        <%= render partial: "shared/stripe_checkout_button" %>
+        <%= hidden_field_tag(:product_id, @product.id) %>
+        <%= form.submit "Jetzt kaufen", class: "form__btn form__btn--primary" %>
+      <% end %>
+    </p>
+  <% end %>
 
   <p class="rated" data-score="<%= @product.average_rating %>"><strong>Durchschnittliche Kundenbewertung:</strong><br></p>
 
