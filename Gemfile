@@ -57,6 +57,9 @@ gem 'rails-controller-testing'
 # Adds way to accept payments online
 gem 'stripe'
 
+# Adds static analysis security tool
+gem 'brakeman'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
