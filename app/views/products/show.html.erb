@@ -2,7 +2,7 @@
 <h2><%= @product.name %></h2>
 <div class="inline">
 
-  <p><%= image_tag(@product.image_url, class: "img-fluid img__float", alt: @product.name) %></p>
+  <p><%= image_tag(@product.image_url, class: "img-fluid img__float img-zoom", alt: @product.name, width: "350", data_zoom_image: @product.image_url) %></p>
 
   <p>
     <strong>Kurzbeschreibung:</strong>

@@ -1,5 +1,7 @@
 $(document).on('turbolinks:load', function(){
 
+  $('.img-zoom').elevateZoom();
+
   $('.rating').raty({
     starHalf: '<%= asset_path 'star-half.svg' %>',
     starOff: '<%= asset_path 'star-off.svg' %>',
@@ -16,5 +18,5 @@ $(document).on('turbolinks:load', function(){
       return $(this).attr('data-score');
     }
   });
-  
+
 });
