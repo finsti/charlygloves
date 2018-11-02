@@ -35,7 +35,7 @@
     </p>
   <% end %>
 
-  <p class="rated" data-score="<%= @product.average_rating %>"><strong>Durchschnittliche Kundenbewertung:</strong><br></p>
+  <p id="#average-rating" class="rated" data-score="<%= @product.average_rating %>"><strong>Durchschnittliche Kundenbewertung:</strong><br></p>
 
   <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Produkt bearbeiten', edit_product_path(@product) %></button></p>
   <p><button type="button" class="form__btn form__btn--secondary"><%= link_to 'Zur Produktübersicht', products_path %></button></p>
