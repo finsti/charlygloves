@@ -14,6 +14,6 @@
 //= require activestorage
 //= require turbolinks
 //= require jquery3
-//= require_tree .
 //= require jquery.raty.js
 //= require jquery.elevateZoom-3.0.8.min.js
+//= require_tree .
