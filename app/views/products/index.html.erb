@@ -2,7 +2,9 @@
   <h1>Produkte</h1>
   <h2>Elektrisch beheizbare Handschuhe mit Lithium-Polymer-Ionen (Li-Po-Ion) Akku-Technologie</h2>
   <div class="row">
-    <%= render @products %>
+    <% cache(cache_key_for_products) do %>
+      <%= render @products %>
+    <% end %>
     <div class="col-xs-12 col-md-6 col-lg-4 px-0 d-flex align-content-stretch flex-wrap">
       <div class="box">
         <%= image_tag("plus-circle-solid.svg", class: "img-fluid img__product", alt: "Neues Produkt hinzufügen") %>
